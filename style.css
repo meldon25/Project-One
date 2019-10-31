@@ -25,6 +25,7 @@ nav > ul {
     margin: 0 auto;
     display: flex;
     font-family: 'Merriweather sans', sans-serif;
+/*  justify-content: space-around; */
 }
  nav > li { 
     display: inline;
@@ -33,7 +34,8 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-family: 'Merriweather sans', sans-serif;
-    
+
+      
 }
 section {
     width: 55%;
@@ -48,6 +50,12 @@ section {
     width: 60vw;
     height: 600px;
     background-color: rgba(32, 119, 106, 0.62); 
+}
+.box1 img {
+    height: 25vh;
+    padding-top: 50%;
+    justify-content: space-between;
+    margin-left: 8%;
 }
 .box2 {  
     width: 40vw;
@@ -94,42 +102,46 @@ section {
     transition-duration: 0.2s;
     cursor: pointer;
 }
+.main {
+    flex-flow: column;
+}
+.titlePara{
+    display:flex;
+    flex-direction:column;
+    padding:3%;
+}
 .box3 {
-    border: 1px solid red;
-    height: 50vh;
+    display:flex;
+    height: 130vh;
     width: 100%;
     background-color: #d6d5d5;
+    margin:0;
 }
 .box3 > h2 {
+    padding-top: 90px;
+    padding-right: 50%;
     margin-left: 15px;
     font-family: 'Viga', sans-serif;
+    margin:0;
 }
 .box3 > p {
     font-family: 'Viga', sans-serif;
-    padding-right: 50%;
-    margin-left: 15px;
+    /* padding-right: 50%; */
+    margin-left: 15px; 
+    /* width:50%; */
+}
 
-}
-.box3 > button {
-    font-family: 'Merriweather Sans', sans-serif;
-    letter-spacing: 0.5px;
-    background-color: #20776A;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    margin: 30px 60px 30px 60px; 
-    align-content: center;
-}
-.box3 > button:hover {
-    transition-duration: 0.2s;
-    cursor: pointer;
+.box3 img {
+    width: 30%;
+    height: 60%;
+    margin:5%;
+    /* padding-left: 65%; */
+    /* border: 3px solid black; */
 }
 .container:after {
-    content: '';
+    /* content: '';
     display: table;
-    clear: both;
+    clear: both; */
 }
 .container2 .column {
     width: 50vw;
@@ -143,7 +155,6 @@ section {
 }
 .container2 {
     display: flex;
-    /* width: 33.33%; */
 }
 /* .container2:after {
     content: '';
