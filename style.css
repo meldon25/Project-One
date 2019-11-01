@@ -5,90 +5,100 @@ body {
 nav {
     background-color: #113643;
     display: flex;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
-    height: 60px;
+    /* height: 10vh; */
 }
-nav > h1 {
+    @keyframes heading {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+nav h1 {
     color: white;
     text-align: center;
-    font-family: 'Merriweather sans', sans-serif;
+    font-family: 'Viga', sans-serif;
     font-size: 35px;
     letter-spacing: 2px;
-    padding-top: 10px;
-    margin-block-start: 0;
+    padding: 5px 0px;
+    margin-block-start: 0px;
     margin-block-end: 0;
+    animation: heading 3s;
+    animation-fill-mode: forwards;
 }
 nav ul {
     list-style-type: none;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-/*  justify-content: space-around; */
 }
  nav li { 
     display: inline-block;
-}
-nav ul li {
-    padding-top: 20px;
 }
 nav ul li a {
     color: white;
     text-decoration: none;
     font-family: 'Merriweather sans', sans-serif;
-    letter-spacing: 2px;      
+    letter-spacing: 2px; 
+    margin: 0px 40px;  
 }
-/* section {
-    width: 55%;
-    height: 65%;
-    border: 5px solid black;
-} */
 .container {
     display: flex;
     padding-top: 3em;
 }
 .box1 {
     width: 60vw;
-    height: 580px;
+    height: 80vh;
     background-color: rgba(32, 119, 106, 0.62); 
 }
 .box1 img {
-    height: 25vh;
-    padding-top: 50%;
-    justify-content: space-between;
-    margin-left: 8%;
+    height: 80vh;
+    width: 60vw;
+    /* margin: 0px px 5px 0px; */
 }
 .box2 {  
     width: 40vw;
-    height: 580px;
+    height: 80vh;
     background-color: #d6d5d5;    
 }
 .box2 h1 {
     font-family: 'Viga', sans-serif;
-    font-size: 25px;
-    margin: 20px 30px 0px 30px;
+    font-size: 24px;
+    margin: 30px 30px 0px 20px;
 }
-.box2 > h2 {
+.box2 h2 {
     font-family: 'Viga', sans-serif;
-    font-size: 25px;
+    font-size: 24px;
     color: rgba(32, 119, 106, 0.62);
-    margin: 10px 30px 30px 30px;
+    margin: 15px 30px 30px 20px;
 }
-.box2 > h3 {
+/* .box2 .iconWrap {
+} */
+.box2 .iconText, .iconText2 {
+    display: flex;
+}
+.box2 .iconText img { 
+    width: 3vw;
+    height: 6vh;
+}
+.box2 .iconText2 img {
+    width: 3vw;
+    height: 6vh;
+}
+.box2 h3 {
     text-align: right;
     font-family: 'Viga', sans-serif;
-    margin: 55px 40px 30px 30px; 
+    display: inline-block;
 
 }
-.box2 > p {
+.box2 p {
     text-align: center;
     font-family: 'Viga', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 0.5px;
     margin: 20px 10px 20px 10px;
-    padding: 40px 10px 40px 10px;
+    padding: 20px 10px 40px 10px;
 }
-.box2 > button {
+.box2 button {
     font-family: 'Merriweather Sans', sans-serif;
     letter-spacing: 0.5px;
     background-color: #20776A;
@@ -102,7 +112,7 @@ nav ul li a {
     align-content: center; 
     justify-content: center;
 }
-.box2 > button:hover {
+.box2 button:hover {
     transition-duration: 0.2s;
     cursor: pointer;
 }
@@ -134,7 +144,6 @@ nav ul li a {
     border-radius: 6px;
     position: relative;
     overflow: hidden;
-    /* background: transparent; */
 }
 
 .titlePara .input label span {
@@ -144,15 +153,24 @@ nav ul li a {
     bottom: 5px;
     left: 10px;
 }
-/* .titlePara .input input label {
+.titlePara .input input label {
     background: transparent;
     position: absolute;
     pointer-events: none;
 }
-/*  */
+.input input:focus + label span,
+.input input:valid + label span {
+    font-size: 10px;
+    color: black;
+    transform: translateY(-150%);
+}
+.input input:focus + label::after,
+.input input:valid + label::after {
+    transform: translateX(0%);
+}
 .box3 {
     display:flex;
-    height: 120vh;
+    height: 100vh;
     width: 100%;
     background-color: #d6d5d5;
     margin:0;
@@ -170,7 +188,7 @@ nav ul li a {
 }
 .box3 img {
     width: 30%;
-    height: 85%;
+    height: 75%;
     margin:5%;
 }
 .container2 {
@@ -195,12 +213,19 @@ nav ul li a {
 .container2 .column2 {
     width: 50vw;
     height: 600px;
-    /* border: 2px solid yellow; */
+}
+.container2 .column2 h2 {
+    text-align: center;
+}
+.container2 .column2 p {
+    font-size: 18px;
+    text-align: center;
+    margin: 0px 40px 10px 40px;
 }
 .container2 .column img {
-    width: 400px;
-    height: 300px;
-    margin-left: 110px;
+    width: 35vw;
+    height: 42vh;
+    margin-left: 95px;
     padding-top: 40px;
 } 
 .container2 .column button {
@@ -225,32 +250,98 @@ nav ul li a {
     font-family: 'Viga', sans-serif;
     background-color: #d6d5d5;
 }
-footer > .help {
-    float: left;
-    padding: 30px;
-    border: 1px solid red;
+.container2 .column2 img {
+    width: 35vw;
+    height: 42vh;
+    margin-left: 110px;
+    padding-top: 40px;
 }
-footer > .help > h4 {
+.container2 .column2 button {
+    font-family: 'Merriweather Sans', sans-serif;
+    letter-spacing: 0.5px;
+    background-color: #20776A;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-left: 35%;
+    align-content: center; 
+    justify-content: center;
+}
+.container2 .column2 button:hover {
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+footer {
+    background-color: #d6d5d5;
+    display: flex;
+    justify-content: space-evenly;
+    height: 60vh;  
+}
+footer .help {
+    flex-direction: column;
+    height: 30vh;
+}
+footer .help h4 {
     font-family: 'Viga', sans-serif;
-    font-size: 22px;
+    font-size: 24px;
 }
-footer > .help > nav {
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+footer ul li {
+    margin: 0px 20px 10px 0px;
+}
+footer .help ul li a { 
     font-family: 'Viga', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
 }
-footer > .shop {
-    float: left;
-    padding: 30px;
-    border: 1px solid blue;
+footer .shop {
+    flex-direction: column;
+    height: 30vh;
 }
-footer > .learn {
-    float: right;
-    padding: 30px;
-    border: 1px solid yellow;
+footer .shop h4 {
+    font-family: 'Viga', sans-serif;
+    font-size: 24px;
 }
-footer > .guides {
-    float: right;
-    padding: 30px;
-    border: 1px solid orange;
+footer .shop ul li a {
+    font-family: 'Viga', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
 }
+footer .learn {
+    flex-direction: column;
+    height: 30vh;
+}
+footer .learn h4 {
+    font-family: 'Viga', sans-serif;
+    font-size: 24px;
+}
+footer .learn ul li a {
+    font-family: 'Viga', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+footer .guides {
+    flex-direction: column;
+    height: 30vh;
+}
+footer .guides h4 {
+    font-family: 'Viga', sans-serif;
+    font-size: 24px;
+}
+footer .guides ul li a {
+    font-family: 'Viga', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
 
