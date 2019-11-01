@@ -5,9 +5,7 @@ body {
 nav {
     background-color: #113643;
     display: flex;
-    /* position: fixed; */
     width: 100%;
-    /* height: 10vh; */
 }
     @keyframes heading {
     from {opacity: 0;}
@@ -43,7 +41,6 @@ nav ul li a {
 }
 .container {
     display: flex;
-    padding-top: 3em;
 }
 .box1 {
     width: 60vw;
@@ -53,7 +50,6 @@ nav ul li a {
 .box1 img {
     height: 80vh;
     width: 60vw;
-    /* margin: 0px px 5px 0px; */
 }
 .box2 {  
     width: 40vw;
@@ -71,8 +67,6 @@ nav ul li a {
     color: rgba(32, 119, 106, 0.62);
     margin: 15px 30px 30px 20px;
 }
-/* .box2 .iconWrap {
-} */
 .box2 .iconText, .iconText2 {
     display: flex;
 }
@@ -119,65 +113,27 @@ nav ul li a {
 .main {
     flex-flow: column;
 }
-.titlePara{
-    display:flex;
-    flex-direction:column;
-    padding:3%;
-}
-.titlePara div.p-wrapper {
-    margin: 20px 0px 20px 0px;
-}
-.titlePara div.p-wrapper h2 {
-    font-size: 24px;
-    font-family: 'Viga', sans-serif;
-    padding: 10px 337.5px 0px 0px;
-}
-.titlePara div.p-wrapper p {
-    font-size: 18px;
-    font-family: 'Viga', sans-serif;
-    margin: 25px 15px 25px 0px;
-}
-.titlePara .input input {
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-    height: 2em;
-    width: 40%;
-    border-radius: 6px;
-    position: relative;
-    overflow: hidden;
-}
 
-.titlePara .input label span {
-    color: black;
-    transition: all 0.4s ease;
-    position: absolute;
-    bottom: 5px;
-    left: 10px;
+ .box3 .p-wrapper {
+     padding-top: 70px;
+ }
+.woman-image{
+    width: 30%;
+    height: auto;
+    margin:5%;
 }
-.titlePara .input input label {
-    background: transparent;
-    position: absolute;
-    pointer-events: none;
-}
-.input input:focus + label span,
-.input input:valid + label span {
-    font-size: 10px;
-    color: black;
-    transform: translateY(-150%);
-}
-.input input:focus + label::after,
-.input input:valid + label::after {
-    transform: translateX(0%);
+.input h4 {
+    font-family: 'Viga', sans-serif;
 }
 .box3 {
     display:flex;
-    height: 100vh;
+    flex-direction: row;
+    height: auto;
     width: 100%;
     background-color: #d6d5d5;
     margin:0;
 }
 .box3 h2 {
-    padding-top: 90px;
-    padding-right: 50%;
     margin-left: 15px;
     font-family: 'Viga', sans-serif;
     margin:0;
@@ -186,11 +142,7 @@ nav ul li a {
     font-family: 'Viga', sans-serif;
     margin-left: 15px; 
 }
-.box3 img {
-    width: 30%;
-    height: 75%;
-    margin:5%;
-}
+
 .container2 {
     display: flex;
 }
@@ -223,7 +175,7 @@ nav ul li a {
     margin: 0px 40px 10px 40px;
 }
 .container2 .column img {
-    width: 35vw;
+    width: 73%;
     height: 42vh;
     margin-left: 95px;
     padding-top: 40px;
@@ -251,7 +203,7 @@ nav ul li a {
     background-color: #d6d5d5;
 }
 .container2 .column2 img {
-    width: 35vw;
+    width: 70%;
     height: 42vh;
     margin-left: 110px;
     padding-top: 40px;
@@ -344,4 +296,35 @@ footer .guides ul li a {
     color: black;
 }
 
+/* -----------------------------------------------media-queries----------------------------------------------------- */
+
+@media only screen 
+and (max-width: 500px) {
+    body {
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+    .box1 img, .box2 img, .container2 .column, .container2 .column2, .box1, .box2, .box3{
+        width: 100%;
+    }
+    .box3, .column, .container, .container2 {
+        flex-direction: column;
+    }
+    .box3 {
+        height: 100%;
+    }
+    .box3 img {
+        width: 80%;
+        margin: auto;
+    }
+    .navbar {
+        padding: 0;
+    }
+    nav {
+        flex-direction: column;
+    }
+
+}
 

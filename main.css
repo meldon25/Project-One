@@ -6,11 +6,10 @@ html, body {
     letter-spacing: .5px;
     color: black;
     background-color: #d6d5d5;
-    position:relative;
+    position: relative;
 }
-
 body{
-    margin:0;
+    margin: 0;
 }
 nav {
     background-color: #113643;
@@ -18,10 +17,15 @@ nav {
     width: 100%;
     height: 10vh;
 }
+
+/* ---------------------------------------------key-frame---------------------------------------------------------- */
+
     @keyframes heading {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+/* -------------------------------------------------end------------------------------------------------------------- */
+
 nav h1 {
     color: white;
     text-align: center;
@@ -48,13 +52,13 @@ nav ul li a {
     text-decoration: none;
     font-family: 'Merriweather sans', sans-serif;
     letter-spacing: 2px; 
-    margin: 0px 40px;  
+    margin: 0px 30px;  
 }
 #container {
-    display:flex;
+    display: flex;
     justify-content: center;
     height: 240px;
-    left: 15%;
+    left: 5%;
     margin: 10% auto 0 auto;
     width: 69%;
     background:#20776A;
@@ -91,8 +95,6 @@ input[type=password] {
     border: 1px solid black;
     border-radius: 2px;
     box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4);
-    transition: all .4s ease;
-
 }
 #lower {
     background: #20776A;
@@ -121,14 +123,13 @@ input[type=submit] {
     cursor: pointer;
 }
 #background-wrap {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     bottom: -20px;
     left: 0;
     position: absolute;  
-    height:50px;
-    width:100%;
-    /* background:green; */
+    height: 50px;
+    width: 100%;
 }
 #background-wrap .bubble {
     position: relative;
@@ -169,70 +170,75 @@ input[type=submit] {
     animation: bubbleX5 4s linear;
 }
 
+/* ------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------- key frames --------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------- */
+
+
 @keyframes animateBubble {
     0% {bottom: 0;}
     100% {bottom: 500px;}
 }
 
 @keyframes bubbleX1 {
-    0% {bottom: 0;}
-    50%{bottom:250px; margin-left:50px;}
+    0% {bottom: 0; opacity: 0;}
+    50%{bottom: 250px; margin-left: 50px;}
     100% {bottom: 600px;}
 }
-
 @keyframes bubbleX2 {
-    0% {bottom: 0;}
-    50%{bottom:250px; margin-left:20px;background-color: red;}
+    0% {bottom: 0;opacity: 0;}
+    50%{bottom: 250px; margin-left: 20px; background-color: lightskyblue;}
     100% {bottom: 600px;}
 }
 
 @keyframes bubbleX3 {
-    0% {bottom: 0;}
-    50%{bottom:230px; margin-left:45px;}
+    0% {bottom: 0; opacity: 0;}
+    50%{bottom: 230px; margin-left: 45px; background-color: lightskyblue;}
     100% {bottom: 600px;}
 }
 @keyframes bubbleX4 {
-    0% {bottom: 0;}
-    50%{bottom:150px; margin-left:65px;}
+    0% {bottom: 0; opacity: 0;}
+    50%{bottom: 150px; margin-left: 65px; background-color: lightskyblue;}
     100% {bottom: 600px;}
 }
 @keyframes bubbleX5 {
-    0% {bottom: 0;}
-    50%{bottom:200px; margin-left:35px;}
+    0% {bottom: 0; opacity: 0;}
+    50%{bottom: 200px; margin-left: 35px; background-color: lightskyblue;}
     100% {bottom: 600px;}
 }
 @keyframes bubbleX6 {
-    0% {bottom: 0;}
-    50%{bottom:300px; margin-left:100px;}
+    0% {bottom: 0; opacity: 0;}
+    50%{bottom: 300px; margin-left: 100px; background-color: lightskyblue;}
     100% {bottom: 600px;}
 }
 @keyframes bubbleX7 {
-    0% {bottom: 0;}
-    50%{bottom:360px; margin-left:55px;}
+    0% {bottom: 0; opacity: 0;}
+    50%{bottom: 360px; margin-left: 55px; background-color: lightskyblue;}
     100% {bottom: 600px;}
 }
 @keyframes bubbleX8 {
-    0% {bottom: 0;}
-    50%{bottom:325px; margin-left:45px;}
+    0% {bottom: 0;opacity: 0;}
+    50%{bottom: 325px; margin-left: 45px; background-color: lightskyblue;}
     100% {bottom: 600px;}
 }
 @keyframes bubbleX9 {
-    0% {bottom: 0;}
-    50%{bottom:200px; margin-left:22px;}
+    0% {bottom: 0; opacity: 0;}
+    50%{bottom: 200px; margin-left: 22px; background-color: lightskyblue;}
     100% {bottom: 600px;}
 }
 @keyframes bubbleX10 {
-    0% {bottom: 0;}
-    50%{bottom:400px; margin-left:65px;}
+    0% {bottom: 0; opacity: 0;}
+    50%{bottom: 400px; margin-left: 65px; background-color: lightskyblue;}
     100% {bottom: 600px;}
 }
+
+/* -------------------------------------------------end------------------------------------------------------------- */
 
 footer {
     background-color: #d6d5d5;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-
     position: absolute;
     bottom: 0;
 }
